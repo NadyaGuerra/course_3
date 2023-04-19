@@ -1,6 +1,4 @@
 from datetime import datetime
-
-
 class Operation():
     def __init__(self, date, operation_amount, description, where_from: str, to):
         self.date = date
@@ -30,10 +28,6 @@ class Operation():
                     new.append("")
                 new.append(account[i])
             return ''.join(name + new)
-        # account_to = list(self.to)
-        # account_to[-5:-4] = ["*" "*"]
-
-    # return ''.join(account_to[0:4] + account_to[-5:])
 
     def hide_to(self):
         acc = []
@@ -49,23 +43,11 @@ class Operation():
         acc[1] = "*"
         return ''.join(card + acc)
 
-        # if self.where_from == "нет данных":
-        # return "нет данных"
-
-        # elif "Счет" in self.where_from():
-        # list_to=list(self.where_from)
-        # list_to[-5:-4]=["*","*"]
-
-        # else:
-        # account_from = list(self.where_from)
-        # for i in range(5, 11):
-        # account_from[-i] = "*"
-
     def get_amount(self):
-        return self.operation_amount['amount']
+        return (self.operation_amount['amount'])
 
     def get_currency(self):
         return self.operation_amount["currency"]["name"]
-
     def get_description(self):
         return self.description
+

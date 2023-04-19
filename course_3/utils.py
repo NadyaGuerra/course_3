@@ -20,5 +20,6 @@ def executed(data:list):
     return state_executed
 
 def data_sort(data:list):
+    """функция сортировки даты"""
     data.sort(key=lambda x: x["date"])
-    return data    #отсортировала дату
+    return data
